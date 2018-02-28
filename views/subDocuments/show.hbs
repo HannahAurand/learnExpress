@@ -1,0 +1,14 @@
+{{!-- displays the information of the specified piece of data and adds buttons to input edit and delete --}}
+<h2>{{this.title}}</h2>
+
+<p>URL: <a href="http://{{url}}">{{this.url}}</a></p>
+<p><{{this.description}}</p>
+<p>Date: {{this.date}}</p>
+<p>Discussion:<break>{{this.comments}}</break></p>
+
+
+<a href="edit/{{id}}">Edit This Post</a>
+<form action="/controllers/{{id}}?_method=delete" method="POST">
+<input type="submit" value="delete">
+</form>
+
